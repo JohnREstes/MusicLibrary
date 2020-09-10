@@ -1,0 +1,17 @@
+body{
+    background-image:url('record.jpg');
+    background-attachment:fixed;
+    background-repeat: repeat;
+    background-size: cover;
+}
+th {
+    font-size: 150%;
+    font-weight: bolder;
+}
+tbody {
+    font-size: 125%;
+    font-weight: bold;
+}
+.jumbotron{
+    background-color: #A1BDB9;
+}
