@@ -14,23 +14,25 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-3 text-center">Music Library Search</h1>
+        <p class="display-5 text-center">Click heading to search for specific track, enter input, then click search</p>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-1">
-                <div class="row">
-                    <button id="btn">Search</button>
-                </div>
+                    
+                    <button id="btn" class="btn btn-primary">Search</button>
+                    <button id="reset" class="btn btn-primary">Reset</button>
+
             </div>
             <div class="col-lg-11">
                 <table class="table">
                     <thead> 
                     <tr class="tbl">
-                        <th scope="col"><input class="hidden" id="titleBtn" type = "text" value="Title"/><span id="title">Title</span></th>
-                        <th scope="col"><input class="hidden" id="albumBtn" type = "text" value="Album"/><span id="album">Album</span></th>
-                        <th scope="col"><input class="hidden" id="artistBtn" type = "text" value="Artist"/><span id="artist">Artist</span></th>
-                        <th scope="col"><input class="hidden" id="genreBtn" type = "text" value="Genre"/><span id="genre">Genre</span></th>
-                        <th scope="col"><input class="hidden" id="dateBtn" type = "text" value="Release Date"/><span id="date">Release Date</span></th>
+                        <th scope="col"><input class="hidden" id="titleInput" type = "text" value="Title"/><span id="title">Title</span></th>
+                        <th scope="col"><input class="hidden" id="albumInput" type = "text" value="Album"/><span id="album">Album</span></th>
+                        <th scope="col"><input class="hidden" id="artistInput" type = "text" value="Artist"/><span id="artist">Artist</span></th>
+                        <th scope="col"><input class="hidden" id="genreInput" type = "text" value="Genre"/><span id="genre">Genre</span></th>
+                        <th scope="col"><input class="hidden" id="dateInput" type = "text" value="Release Date"/><span id="date">Release Date</span></th>
                     </tr>
                     </thead>
                     <tbody id="jsonData"> 

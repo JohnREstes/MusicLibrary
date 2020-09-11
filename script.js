@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     var currentData = null;
+    var th = "";
 
     $(function (){
 
@@ -31,84 +32,80 @@ $(document).ready(function() {
         });
     };
 
-    function filterResults(currentData, th){
-        //var newResults = null;
+    function filterResults(currentData, th, str){
         var newResults = $(currentData).filter(function(i) {
-            return currentData[i][th] === "The Beatles";
+            return currentData[i][th] === str;
         });
-        //newResults = currentData.filter(el => el.[artist] === "The Beatles");
         $("#jsonData > tr").remove();
         buildTable(newResults);
     };
 
-    var th = ""
+    function resetPage(){
+        window.location.reload()
+    };
+
+    $("#reset").click(function(){
+        resetPage();
+    });
 
     $("#title").click(function(event) {
-    th = "title";
-    filterResults(currentData, th);
+        th = "title";
+        $("#title").empty();
+        $("#titleInput").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#titleInput").val();
+            filterResults(currentData, th, str);
+        });
     });
+
     $("#album").click(function(event) {
-    th = "album";
-    filterResults(currentData, th);
+        th = "album";
+        $("#album").empty();
+        $("#albumInput").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#albumInput").val();
+            filterResults(currentData, th, str);
+        });
     });
+
     $("#artist").click(function(event) {
-    th = "artist";
-    filterResults(currentData, th);
+        th = "artist";
+        $("#artist").empty();
+        $("#artistInput").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#artistInput").val();
+            filterResults(currentData, th, str);
+        });
     });
+
     $("#genre").click(function(event) {
-    th = "genre";
-    filterResults(currentData, th);
+        th = "genre";
+        $("#genre").empty();
+        $("#genreInput").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#genreInput").val();
+            filterResults(currentData, th, str);
+        });
     });
+
     $("#date").click(function(event) {
-    th = "releaseDate";
-    filterResults(currentData, th);
+        th = "releaseDate";
+        $("#date").empty();
+        $("#dateInput").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#dateInput").val();
+            filterResults(currentData, th, str);
+        });
     });
 
-    
-    // $('.tbl').on('click','#title',function(event) {
-    //         console.log(event.target);
-    //     var t = $(this).text();
-    //     $(this).text('').append($('<input />',{'value' : t}));
-    //     $('input').focus();
-        
-    // });
-
-    // $('.tbl').on('blur','input',function() {
-    // $(this).parent().text($(this).val());
-    // });
-
-    // $('.tbl').on('click','#date',function() {
-            
-    //     var t = $(this).text();
-    //     $(this).text('').append($('<input />',{'value' : t}));
-    //     $('input').focus();
-        
-    // });
-
-    // $('.tbl').on('blur','input',function() {
-    // $(this).parent().text($(this).val());
-    // });
-
-    // $(function (){
-    //     var $jsonData = $('#jsonData');
-    //     var songTemplate = "" +
-    //     "<tr>" +
-    //     "<td>{{title}}</td>" +
-    //     "<td>{{album}}</td>" +
-    //     "<td>{{artist}}</td>" +
-    //     "<td>{{genre}}</td>" +
-    //     "<td>{{releaseDate}}</td>" + 
-    //     "</tr>";
-
-    //     $.ajax({
-    //         url: 'http://www.devcodecampmusiclibrary.com/api/music',
-    //         dataType: "json",
-    //         type: 'GET',
-    //         success: function(data){
-    //             $.each(data, function(i, jsonData) {
-    //                 $jsonData.append(Mustache.render(songTemplate, jsonData));
-    //             });
-    //         }
-    //     });
-    // });
 });

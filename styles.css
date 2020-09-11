@@ -18,7 +18,9 @@ tbody {
 }
 .hidden{
     display: none;
+    width: 150px;
 }
-#btn{
+.btn{
     display: none;
+    margin: 15px;
 }
