@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+var currentData = null;
     $(function (){
 
         $.ajax({
@@ -7,12 +7,13 @@ $(document).ready(function() {
             dataType: "json",
             type: 'GET',
             success: function(data){
-                buildString(data);
+                currentData = data;
+                buildTable(currentData);
             }
         });
     });
 
-    function buildString(data){
+    function buildTable(data){
         var $jsonData = $('#jsonData');
         var songTemplate = "" +
         "<tr>" +
