@@ -40,12 +40,8 @@ $(document).ready(function() {
         buildTable(newResults);
     };
 
-    function resetPage(){
-        window.location.reload()
-    };
-
     $("#reset").click(function(){
-        resetPage();
+        window.location.reload();
     });
 
     $("#title").click(function(event) {

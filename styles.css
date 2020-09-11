@@ -23,4 +23,21 @@ tbody {
 .btn{
     display: none;
     margin: 15px;
+    width: 78px;
+    background-color: black;
+    border-color: #A1BDB9;
+    color: #A1BDB9;
+}
+.btn:hover{
+    background-color: #A1BDB9;
+    border-color: black;
+    color: black;
+}
+.btn:visited{
+    background-color: #A1BDB9;
+    border-color: black;
+    color: black;
+}
+.btn:focus {
+    outline-color: transparent !important;
 }
