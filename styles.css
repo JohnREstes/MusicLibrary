@@ -18,7 +18,7 @@ tbody {
 }
 .hidden{
     display: none;
-    width: 150px;
+    width: 200px;
 }
 .btn{
     display: none;
@@ -37,7 +37,4 @@ tbody {
     background-color: #A1BDB9;
     border-color: black;
     color: black;
-}
-.btn:focus {
-    outline-color: transparent !important;
 }
