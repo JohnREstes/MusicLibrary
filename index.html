@@ -13,22 +13,24 @@
 </head>
 <body>
     <div class="jumbotron">
-        <h1 class="display-4 text-center">Music Library Search</h1>
+        <h1 class="display-3 text-center">Music Library Search</h1>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
-                
+            <div class="col-lg-1">
+                <div class="row">
+                    <button id="btn">Search</button>
+                </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-11">
                 <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Title</th>
-                        <th scope="col">Album</th>
-                        <th scope="col">Artist</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Release Date</th>
+                    <thead> 
+                    <tr class="tbl">
+                        <th scope="col"><span id="title">Title</span></th>
+                        <th scope="col"><span id="album">Album</span></th>
+                        <th scope="col"><span id="artist">Artist</span></th>
+                        <th scope="col"><span id="genre">Genre</span></th>
+                        <th scope="col"><span id="date">Release Date</span></th>
                     </tr>
                     </thead>
                     <tbody id="jsonData">

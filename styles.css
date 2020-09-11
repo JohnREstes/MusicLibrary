@@ -14,4 +14,8 @@ tbody {
 }
 .jumbotron{
     background-color: #A1BDB9;
+    padding: 10px;
+}
+#btn{
+    display: none;
 }
