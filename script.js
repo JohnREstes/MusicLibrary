@@ -40,68 +40,44 @@ $(document).ready(function() {
         buildTable(newResults);
     };
 
+    function inputSearch(th){
+        $("#" + th).empty();
+        $("#" + th + "Input").fadeIn();
+        $("#btn").fadeIn();
+        $("#reset").fadeIn();
+        $("#btn").click(function(){
+            var str = $("#" + th + "Input").val();
+            filterResults(currentData, th, str);
+        });
+    };
+
     $("#reset").click(function(){
         window.location.reload();
     });
 
     $("#title").click(function(event) {
         th = "title";
-        $("#title").empty();
-        $("#titleInput").fadeIn();
-        $("#btn").fadeIn();
-        $("#reset").fadeIn();
-        $("#btn").click(function(){
-            var str = $("#titleInput").val();
-            filterResults(currentData, th, str);
-        });
+        inputSearch(th);
     });
 
     $("#album").click(function(event) {
         th = "album";
-        $("#album").empty();
-        $("#albumInput").fadeIn();
-        $("#btn").fadeIn();
-        $("#reset").fadeIn();
-        $("#btn").click(function(){
-            var str = $("#albumInput").val();
-            filterResults(currentData, th, str);
-        });
+        inputSearch(th);
     });
 
     $("#artist").click(function(event) {
         th = "artist";
-        $("#artist").empty();
-        $("#artistInput").fadeIn();
-        $("#btn").fadeIn();
-        $("#reset").fadeIn();
-        $("#btn").click(function(){
-            var str = $("#artistInput").val();
-            filterResults(currentData, th, str);
-        });
+        inputSearch(th);
     });
 
     $("#genre").click(function(event) {
         th = "genre";
-        $("#genre").empty();
-        $("#genreInput").fadeIn();
-        $("#btn").fadeIn();
-        $("#reset").fadeIn();
-        $("#btn").click(function(){
-            var str = $("#genreInput").val();
-            filterResults(currentData, th, str);
-        });
+        inputSearch(th);
     });
 
     $("#date").click(function(event) {
         th = "releaseDate";
-        $("#date").empty();
-        $("#dateInput").fadeIn();
-        $("#btn").fadeIn();
-        $("#reset").fadeIn();
-        $("#btn").click(function(){
-            var str = $("#dateInput").val();
-            filterResults(currentData, th, str);
-        });
+        inputSearch(th);
     });
 
 });
