@@ -75,7 +75,7 @@ $(document).ready(function() {
         inputSearch(th);
     });
 
-    $("#date").click(function(event) {
+    $("#releaseDate").click(function(event) {
         th = "releaseDate";
         inputSearch(th);
     });
