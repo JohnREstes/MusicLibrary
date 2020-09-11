@@ -16,6 +16,9 @@ tbody {
     background-color: #A1BDB9;
     padding: 10px;
 }
+.hidden{
+    display: none;
+}
 #btn{
     display: none;
 }
