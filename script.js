@@ -31,32 +31,37 @@ $(document).ready(function() {
         });
     };
 
-    function filterResults(currentData){
-        var newResults = null;
-        newResults = currentData.filter(el => el.artist === "The Beatles");
-        console.log(newResults);
+    function filterResults(currentData, th){
+        //var newResults = null;
+        var newResults = $(currentData).filter(function(i) {
+            return currentData[i][th] === "The Beatles";
+        });
+        //newResults = currentData.filter(el => el.[artist] === "The Beatles");
+        $("#jsonData > tr").remove();
+        buildTable(newResults);
     };
 
     var th = ""
 
     $("#title").click(function(event) {
-    th = "#title";
+    th = "title";
+    filterResults(currentData, th);
     });
     $("#album").click(function(event) {
-    th = "#album";
-    alert(th);
+    th = "album";
+    filterResults(currentData, th);
     });
     $("#artist").click(function(event) {
-    th = "#artist";
-    filterResults(currentData);
+    th = "artist";
+    filterResults(currentData, th);
     });
     $("#genre").click(function(event) {
-    th = "#genre";
-    alert(th);
+    th = "genre";
+    filterResults(currentData, th);
     });
     $("#date").click(function(event) {
-    th = "#releaseDate";
-    alert(th);
+    th = "releaseDate";
+    filterResults(currentData, th);
     });
 
     
