@@ -1,5 +1,7 @@
 $(document).ready(function() {
-var currentData = null;
+
+    var currentData = null;
+
     $(function (){
 
         $.ajax({
@@ -29,12 +31,16 @@ var currentData = null;
         });
     };
 
+    function filterResults(currentData){
+        var newResults = null;
+        newResults = currentData.filter(el => el.artist === "The Beatles");
+        console.log(newResults);
+    };
 
     var th = ""
 
     $("#title").click(function(event) {
     th = "#title";
-    alert(th);
     });
     $("#album").click(function(event) {
     th = "#album";
@@ -42,7 +48,7 @@ var currentData = null;
     });
     $("#artist").click(function(event) {
     th = "#artist";
-    alert(th);
+    filterResults(currentData);
     });
     $("#genre").click(function(event) {
     th = "#genre";
